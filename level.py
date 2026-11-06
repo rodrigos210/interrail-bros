@@ -11,7 +11,11 @@ import math
 TILE_SIZE = 40
 
 class Level:
-    def __init__(self):
+    def __init__(self, layout=None):
+        if layout is None:
+            layout = LEVEL_1
+
+        self.layout = layout
         self.platforms = []
         self.revisor_spawns = []
 
@@ -25,12 +29,12 @@ class Level:
             "w": pygame.image.load("visuals/plataformas/parede_teste3.png").convert_alpha(),
             "M": pygame.image.load("visuals/plataformas/madeira1.png").convert_alpha(),
             "m": pygame.image.load("visuals/plataformas/madeira2.png").convert_alpha(),
-            "S": pygame.image.load("visuals/plataformas/stone1.png").convert_alpha(),
-            "s": pygame.image.load("visuals/plataformas/stone2.png").convert_alpha(),
+            "S": pygame.image.load("visuals/plataformas/stone_c3.png").convert_alpha(),
+            "s": pygame.image.load("visuals/plataformas/stone_c2.png").convert_alpha(),
             "A": pygame.image.load("visuals/plataformas/sand.png").convert_alpha(),
             "a": pygame.image.load("visuals/plataformas/sand2.png").convert_alpha()
         }
-        self.load_level(LEVEL_1)
+        self.load_level(self.layout)
 
         # floor_height = self.platform_tiles["#"].get_height()
         # self.floor = pygame.Rect(
@@ -42,7 +46,7 @@ class Level:
 
         # self.floor = pygame.Rect(0, SCREEN_HEIGHT - 40, 5000, 40)
         self.world_shift = 0
-        self.level_width = len(LEVEL_1[0]) * TILE_SIZE
+        self.level_width = len(self.layout[0]) * TILE_SIZE
 
         self.background_images = [
             # {
@@ -66,11 +70,11 @@ class Level:
             {
                 "name": "far_bg_2",
                 "img": pygame.image.load(
-                    "visuals/backgrounds/pol_bg_4.png"
+                    "visuals/backgrounds/pol_bg_5.png"
                 ).convert_alpha(),
                 "x": 0,
-                "y": 0,
-                "parallax": 0.1
+                "y": -100,
+                "parallax": 0.05
             }
         ]
 

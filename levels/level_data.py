@@ -1,3 +1,30 @@
+# level_data.py
+# Grid: 13 rows tall, variable width. Tile size = 40px.
+# Screen = 768x512 (~19 tiles wide, ~12 tall). Levels scroll horizontally.
+#
+# Tile key:
+#   .  = empty
+#   P  = revisor spawn (enemy)
+#   #  = generic platform
+#   W  = wall tall (dark)       w = wall short (dark)
+#   T  = earth/soil             R = grass top
+#   M  = wood plank (light)     m = wood plank (dark)
+#   S  = stone (light)          s = stone (dark)
+#   A  = sand (light)           a = sand (dark)
+#
+# Row 0-6  = sky / upper play area
+# Row 7-9  = main play zone (platforms, enemies)
+# Row 10   = ground top layer
+# Row 11   = ground mid layer
+# Row 12   = ground base layer
+#
+# Each level starts with a train on the left, ends with an exit train on the right.
+# The player spawns just right of the left train.
+
+# ---------------------------------------------------------------------------
+# LEVEL 1 — POLAND (POL)
+# Stone city. Flat, introductory. 1 revisor spawn. Small gaps.
+# ---------------------------------------------------------------------------
 LEVEL_1 = [
     # 0
     "........................................................................................................................................",
@@ -27,3 +54,274 @@ LEVEL_1 = [
     "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
 ]
 
+# ---------------------------------------------------------------------------
+# LEVEL 2 — AUSTRIA (AUS)
+# Alpine wooden platforms. Small gaps introduced. 1 revisor.
+# Theme: M/m wood planks, R grass accents. Slightly more vertical.
+# ---------------------------------------------------------------------------
+LEVEL_2 = [
+    # 0
+    "...........................................................................................................",
+    # 1
+    "............................MMMMM.............................................MMMMM......................",
+    # 2
+    "...........................................................................................................",
+    # 3
+    "................RRRRR.......................................RRRRR.......................................",
+    # 4
+    "...........................................................................................................",
+    # 5
+    ".....................MMMMMM..............MMMMMM................................MMMMMM...................",
+    # 6
+    "...........................................................................................................",
+    # 7
+    ".W.....MMMM.............MMMM..............MMMM.............MMMM...............................W......",
+    # 8
+    ".w.....mmmm.............mmmm..............mmmm.............mmmm...............................w......",
+    # 9
+    "Pw.....mmmm....P.......mmmm..............mmmm.............mmmm...............................w......",
+    # 10
+    "MMMMMMMMMMMM.......MMMMMMMMMMMM....MMMMMMMMMMMM.....MMMMMMMMMM....MMMMMMMMMMMMMMMMMMMMMMMMMMM......",
+    # 11
+    "mmmmmmmmmmmmMMMMMMMmmmmmmmmmmmmMMMMmmmmmmmmmmmmmMMMMmmmmmmmmmmmMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmm......",
+    # 12
+    "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm......"
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 3 — SLOVAKIA (SVK)
+# Rolling hills, earth+grass. First real gaps over the void. 2 revisors.
+# Theme: R/T grass and earth, W walls as rocky outcrops.
+# ---------------------------------------------------------------------------
+LEVEL_3 = [
+    # 0
+    ".............................................................................................................",
+    # 1
+    ".................................RRRRR................................................RRRRR...............",
+    # 2
+    ".............................................................................................................",
+    # 3
+    "....................RRRRRR...............................RRRRRR...................................RRRRRR...",
+    # 4
+    ".............................................................................................................",
+    # 5
+    ".................TTTTTTTTTT....................TTTTTTTTTT................................TTTTTTTTTT.......",
+    # 6
+    ".............................................................................................................",
+    # 7
+    ".W.....RRRR.............................RRRR...............................RRRR.......................W..",
+    # 8
+    ".w.....TTTT.............................TTTT...............................TTTT.......................w..",
+    # 9
+    "Pw.....TTTT......P......................TTTT.......P.......................TTTT.......................w..",
+    # 10
+    "RRRRRRRRRRRRR.........RRRRRRRRRRRR.............RRRRRRRRRRRR.........RRRRRRRRRRR.........RRRRRRRRRRRR.",
+    # 11
+    "TTTTTTTTTTTTTRRRRRRRRTTTTTTTTTTTTRRRRRRRRRRRRTTTTTTTTTTTTRRRRRRRRRTTTTTTTTTTTRRRRRRRTTTTTTTTTTTT.",
+    # 12
+    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT."
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 4 — HUNGARY (HUN)
+# Stone ruins + sand. Wider gaps, platforms at varied heights. 2 revisors.
+# Theme: S/s stone + A/a sand, mix of heights.
+# ---------------------------------------------------------------------------
+LEVEL_4 = [
+    # 0
+    "...................................................................................................................",
+    # 1
+    "...............................SSSSS................................................SSSSS...................",
+    # 2
+    "...................................................................................................................",
+    # 3
+    "...............AAAAA.......................................AAAAA......................................AAAAA...",
+    # 4
+    "...................................................................................................................",
+    # 5
+    "..................SSSSSS.......................SSSSSS...............................SSSSSS...................",
+    # 6
+    "...................................................................................................................",
+    # 7
+    ".W.....AAAA.......SSSS........AAAA.......SSSS.......AAAA.......SSSS.......AAAA.......................W.....",
+    # 8
+    ".w.....aaaa.......ssss........aaaa.......ssss.......aaaa.......ssss.......aaaa.......................w.....",
+    # 9
+    "Pw.....aaaa......P.ssss.......aaaa.......ssss......Paaaa.......ssss.......aaaa.......................w.....",
+    # 10
+    "SSSSSSSSSSSS..........SSSSSSSSSS.........SSSSSSSSSS..........SSSSSSSSSSS.........SSSSSSSSSSSSSSSSSS.....",
+    # 11
+    "ssssssssssssSSSSSSSSSSssssssssssSSSSSSSSSSssssssssssSSSSSSSSSSsssssssssssSSSSSSSSsssssssssssssssssss.....",
+    # 12
+    "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss....."
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 5 — SERBIA (SER)
+# Urban grunge. Tighter corridors with walls, more revisors. 3 revisor spawns.
+# Theme: W/w walls + S/s stone. Narrower passages.
+# ---------------------------------------------------------------------------
+LEVEL_5 = [
+    # 0
+    "......................................................................................................................",
+    # 1
+    ".................SSSS..................................SSSS..................................SSSS...............",
+    # 2
+    "......................................................................................................................",
+    # 3
+    "..........WWWW.....................................WWWW.....................................WWWW.................",
+    # 4
+    "......................................................................................................................",
+    # 5
+    ".................SSSS..................................SSSS..................................SSSS...............",
+    # 6
+    "......................................................................................................................",
+    # 7
+    ".W..SSSS....WWWW.....SSSS....WWWW....SSSS....WWWW....SSSS....WWWW....SSSS....WWWW....SSSS...............W....",
+    # 8
+    ".w..ssss....wwww.....ssss....wwww....ssss....wwww....ssss....wwww....ssss....wwww....ssss...............w....",
+    # 9
+    "Pw..ssss....wwww..P..ssss....wwww..P.ssss....wwww....ssss....wwww..P.ssss....wwww....ssss...............w....",
+    # 10
+    "SSSSSSSSSSSSSSSS......SSSSSSSSSSSSSS......SSSSSSSSSSSSSS......SSSSSSSSSSSSSS......SSSSSSSSSSSSSSSSSSSSSS....",
+    # 11
+    "ssssssssssssssssSSSSSSssssssssssssssSSSSSSssssssssssssssSSSSSSssssssssssssssSSSSSSssssssssssssssssssssss....",
+    # 12
+    "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss...."
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 6 — MONTENEGRO (MON)
+# Coastal cliffs. Big jumps, tall drops, 3 revisor spawns.
+# Theme: A/a sand + S/s stone. Dramatic height changes.
+# ---------------------------------------------------------------------------
+LEVEL_6 = [
+    # 0
+    "...............................................................................................................................",
+    # 1
+    "............................AAAAA..................................................AAAAA......................",
+    # 2
+    "...............................................................................................................................",
+    # 3
+    "............SSSSS.......................................SSSSS.........................................SSSSS...",
+    # 4
+    "...............................................................................................................................",
+    # 5
+    ".........................AAAAA..............AAAAA...............................AAAAA.......AAAAA.........",
+    # 6
+    "...............................................................................................................................",
+    # 7
+    ".W...AAAA...........SSSS.........AAAA.............SSSS.........AAAA..............SSSS................W....",
+    # 8
+    ".w...aaaa...........ssss.........aaaa.............ssss.........aaaa..............ssss................w....",
+    # 9
+    "Pw...aaaa.....P.....ssss.........aaaa....P........ssss.........aaaa....P.........ssss................w....",
+    # 10
+    "AAAAAAAAAA..........SSSSSSSSS..........AAAAAAAAAA..........SSSSSSSSSS.........AAAAAAAAAAAAAAAAAAAAAA....",
+    # 11
+    "aaaaaaaaaaaSSSSSSSSAsssssssssAAAAAAAAAAAAaaaaaaaaaaaSSSSSSSSSSsssssssssAAAAAAAAAAaaaaaaaaaaaaaaaaaaaa....",
+    # 12
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...."
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 7 — BOSNIA & HERZEGOVINA (BHZ)
+# Forest/bridge theme. Wooden platforms over void, gaps over nothing. 3 revisors.
+# Theme: M/m wood. Many floating platforms, gaps over void.
+# ---------------------------------------------------------------------------
+LEVEL_7 = [
+    # 0
+    "...............................................................................................................................",
+    # 1
+    ".........................MMMMM..............................................MMMMM...........................",
+    # 2
+    "...............................................................................................................................",
+    # 3
+    "..........MMMMMMM..................MMMMMMM..........................MMMMMMM..................................",
+    # 4
+    "...............................................................................................................................",
+    # 5
+    ".....MMMMMM.....................................MMMMMM.....................................MMMMMM..........",
+    # 6
+    "...............................................................................................................................",
+    # 7
+    ".W...MMMM..........MMMM.........MMMM.........MMMM.........MMMM..........MMMM.................W............",
+    # 8
+    ".w...mmmm..........mmmm.........mmmm.........mmmm.........mmmm..........mmmm.................w............",
+    # 9
+    "Pw...mmmm....P.....mmmm.....P...mmmm.....P...mmmm.........mmmm....P.....mmmm.................w............",
+    # 10
+    "MMMMMMMMMM.........MMMMMMMMMM.......MMMMMMMMMM.......MMMMMMMMMM.......MMMMMMMMMMMMMMMMMMMMMMMM............",
+    # 11
+    "mmmmmmmmmmMMMMMMMMMmmmmmmmmmmMMMMMMMmmmmmmmmmmMMMMMMMmmmmmmmmmmMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmm............",
+    # 12
+    "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm............"
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 8 — CROATIA (CRO)
+# Island hopping. Widest gaps, sand and grass. 4 revisor spawns.
+# Theme: A/a sand + R grass. Large gaps between island platforms.
+# ---------------------------------------------------------------------------
+LEVEL_8 = [
+    # 0
+    "...................................................................................................................................",
+    # 1
+    "....................................RRRRR..................................................RRRRR....................",
+    # 2
+    "...................................................................................................................................",
+    # 3
+    ".................AAAAA...........................................AAAAA.........................................AAAAA..",
+    # 4
+    "...................................................................................................................................",
+    # 5
+    "..............................RRRRRR................RRRRRR..........................RRRRRR....................",
+    # 6
+    "...................................................................................................................................",
+    # 7
+    ".W....AAAA.............RRRR..............AAAA..............RRRR.............AAAA.......................W....",
+    # 8
+    ".w....aaaa.............TTTT..............aaaa..............TTTT.............aaaa.......................w....",
+    # 9
+    "Pw....aaaa....P........TTTT.........P...aaaa.....P.........TTTT.....P......aaaa.......................w....",
+    # 10
+    "AAAAAAAAAAA.............RRRRRRRRRR.............AAAAAAAAAA..............RRRRRRRRR.........AAAAAAAAAAAAA....",
+    # 11
+    "aaaaaaaaaaaaAAAAAAAAAAAATTTTTTTTTTAAAAAAAAAAAAaaaaaaaaaaaARRRRRRRRRRRRTTTTTTTTTAAAAAAAAAaaaaaaaaaaaaaaa..",
+    # 12
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.."
+]
+
+# ---------------------------------------------------------------------------
+# LEVEL 9 — SLOVENIA (SVN)
+# Alpine finale. Mixed terrain, hardest layout. 4 revisor spawns.
+# Theme: S/s stone + M/m wood + R grass. Alternating platforms, tight jumps.
+# ---------------------------------------------------------------------------
+LEVEL_9 = [
+    # 0
+    "...............................................................................................................................",
+    # 1
+    "....................MMMMM...................SSSSS.......................................MMMMM..................",
+    # 2
+    "...............................................................................................................................",
+    # 3
+    "......RRRRRR...............................MMMMM.......RRRRRR...............................SSSSS...........",
+    # 4
+    "...............................................................................................................................",
+    # 5
+    "..............SSSSS.....MMMMM.................................SSSSS.....MMMMM.............................S..",
+    # 6
+    "...............................................................................................................................",
+    # 7
+    ".W...RRRR....SSSS...MMMM....RRRR....SSSS....MMMM....RRRR....SSSS....MMMM....RRRR....SSSS..........W......",
+    # 8
+    ".w...TTTT....ssss...mmmm....TTTT....ssss....mmmm....TTTT....ssss....mmmm....TTTT....ssss..........w......",
+    # 9
+    "Pw...TTTT..P.ssss...mmmm.P..TTTT....ssss..P.mmmm....TTTT..P.ssss...mmmm.P..TTTT....ssss..........w......",
+    # 10
+    "RRRRRRRRRR.....SSSSSSSSSS.....MMMMMMMMMM.....RRRRRRRRRR.....SSSSSSSSSS.....MMMMMMMMMMMMMMMMMMMMMM......",
+    # 11
+    "TTTTTTTTTTRRRRRssssssssssMMMMMMmmmmmmmmmmRRRRRRRRRRRSSSSSSSSSSRRRRRmmmmmmmmmmTTTTTTTTTTTmmmmmmmmmm......",
+    # 12
+    "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTmm......"
+]

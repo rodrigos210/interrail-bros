@@ -23,9 +23,9 @@ class Game:
         self.running = True
 
         self.player = Player()
-        self.level = Level()
-        self.player.rect.topleft = (self.level.spawn_x, self.level.spawn_y)
         self.level_manager = LevelManager()
+        self.level = Level(self.level_manager.get_selected_layout())
+        self.player.rect.topleft = (self.level.spawn_x, self.level.spawn_y)
         self.game_state = GAME_MAP
         self.heart_image = pygame.image.load("ui/lives.png").convert_alpha()
         
@@ -55,7 +55,8 @@ class Game:
                     self.level_manager.move_selection(-1)
 
                 elif event.key == pygame.K_RETURN:
-                    self.level = Level()
+                    layout = self.level_manager.get_selected_layout()
+                    self.level = Level(layout)
                     self.player = Player()
                     self.player.rect.topleft = (
                         self.level.spawn_x,
